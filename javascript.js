@@ -1,3 +1,4 @@
-const myString = "123";
-const myNum = Number(myString);
-console.log(typeof myNum);
+function random(number) {
+    return Math.floor(Math.random() * number);
+  }
+  
