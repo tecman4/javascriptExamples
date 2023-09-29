@@ -31,7 +31,23 @@
     </ul>
 
     <script>
+//Create three new elements— a list item (<li>), <span>, and <button>, and store them in variables.
+  document.body.onload = addElement;
 
+  function addElement() {
+    const p = document.createElement("li");
+    const button = document.createElement("button");
+    const span = document.createElement("span");
+    span.append(li);
+    button.append(li);
+    }
+  const buttons = document.querySelectorAll('button');
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      
+    alert("YAAY! YOU DID IT!");
+    });});
     </script>
   </body>
 </html>
