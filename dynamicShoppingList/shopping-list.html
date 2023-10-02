@@ -31,23 +31,32 @@
     </ul>
 
     <script>
-//Create three new elements— a list item (<li>), <span>, and <button>, and store them in variables.
-  document.body.onload = addElement;
-
-  function addElement() {
-    const p = document.createElement("li");
+    const list = document.createElement("ul");
+    const input = document.createElement("input");
     const button = document.createElement("button");
-    const span = document.createElement("span");
-    span.append(li);
-    button.append(li);
-    }
-  const buttons = document.querySelectorAll('button');
 
-  buttons.forEach((button) => {
     button.addEventListener('click', () => {
-      
-    alert("YAAY! YOU DID IT!");
-    });});
+      const myItem = input.value;
+      input.value = '';
+
+      const listItem = document.createElement('li');
+      const listText = document.createElement('span');
+      const listBtn = document.createElement('button');
+
+
+        listItem.appendChild(listText);
+        listText.textContent = myItem;
+        listItem.appendChild(listBtn);
+        listBtn.textContent = 'Delete';
+        list.appendChild(listItem);
+
+    listBtn.addEventListener("click", () => {
+      list.removeChild(listItem);
+        });
+    input.focus();
+    });
+
+
     </script>
   </body>
 </html>
